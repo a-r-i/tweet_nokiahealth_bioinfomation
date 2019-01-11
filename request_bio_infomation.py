@@ -1,6 +1,6 @@
-# from config_local import TENCHANAPI_BASIC_AUTH_USER, TENCHANAPI_BASIC_AUTH_PASS
-# from config_starging import TENCHANAPI_BASIC_AUTH_USER, TENCHANAPI_BASIC_AUTH_PASS
-from config_production import TENCHANAPI_BASIC_AUTH_USER, TENCHANAPI_BASIC_AUTH_PASS
+# from config_local import MYAPI_BASIC_AUTH_USER, MYAPI_BASIC_AUTH_PASS
+# from config_starging import MYAPI_BASIC_AUTH_USER, MYAPI_BASIC_AUTH_PASS
+from config_production import MYAPI_BASIC_AUTH_USER, MYAPI_BASIC_AUTH_PASS
 import requests
 import datetime
 import time
@@ -29,7 +29,7 @@ def request_bio_infomation(member):
 
         query = "?startdate=%i&enddate=%i&member=%i&device=%s" % (startdate, enddate, member, value["device"])
 
-        response = requests.get(url + value["path"] + query, headers=headers, auth=(TENCHANAPI_BASIC_AUTH_USER , TENCHANAPI_BASIC_AUTH_PASS))
+        response = requests.get(url + value["path"] + query, headers=headers, auth=(MYAPI_BASIC_AUTH_USER , MYAPI_BASIC_AUTH_PASS))
 
         bio_infomation[key] = response.json()
 
