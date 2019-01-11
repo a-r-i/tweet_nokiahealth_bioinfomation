@@ -17,7 +17,7 @@ now = datetime.datetime.now()
 now_unixtime = int(time.mktime(now.timetuple()))
 
 a_day_to_seconds = 86400
-scheduler_launch_gap = 1800 # record_nokia_healthとtweet_bio_infomationの起動タイミングのギャップを加算する
+scheduler_launch_gap = 1800 # record_nokiahealth_bioinfomationとtweet_nokiahealth_bioinfomationの起動タイミングのギャップを加算する
 
 startdate = now_unixtime - (a_day_to_seconds + scheduler_launch_gap)
 enddate = now_unixtime
