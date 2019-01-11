@@ -1,0 +1,7 @@
+six
+pandas
+numpy
+matplotlib
+requests
+Pillow
+requests_oauthlib
